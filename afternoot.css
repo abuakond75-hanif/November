@@ -1,0 +1,162 @@
+/* --- Global Reset and Base Styles --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White background for the page */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Header and Navigation --- */
+.header {
+    padding: 20px 0;
+    /* পুরো স্ক্রিন জুড়ে ফাঁকা রাখার জন্য কোনও ব্যাকগ্রাউন্ড কালার দেইনি */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* ডিজাইনের মূল প্রস্থ */
+    margin: 0 auto;
+    padding: 0 40px; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #292F36;
+    gap: 10px;
+}
+
+.logo-icon {
+    /* আপনার ডিজাইনে আইকনের জন্য একটি হালকা রঙ আছে */
+    color: #CDA274; 
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-menu li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4D5053;
+    transition: color 0.3s;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-menu li a:hover {
+    color: #CDA274;
+}
+
+.nav-menu li a.active {
+    color: #292F36; 
+}
+
+.search-icon {
+    font-size: 18px;
+    color: #292F36;
+}
+
+
+.hero-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 40px;
+}
+
+.hero-image-container {
+    height: 1220px; 
+    border-radius: 50px; 
+    overflow: hidden;
+    position: relative;
+    
+    
+    background-image: url('Rectangle.jpg'); 
+    background-size: cover;
+    background-position: 75% center; 
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center; 
+}
+
+.hero-content {
+    padding-left: 100px;
+    max-width: 500px;
+    position: relative;
+    z-index: 2; 
+}
+
+.hero-content h1 {
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #292F36;
+    margin: 0 0 20px 0;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #4D5053;
+    margin-bottom: 40px;
+}
+
+.btn-get-started {
+    display: inline-block;
+    background-color: #292F36;
+    color: #fff;
+    padding: 18px 30px;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.btn-get-started:hover {
+    background-color: #CDA274;
+}
+
+
+.work-process-section {
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* কার্ডগুলির মধ্যে ফাঁকা স্থান */
+    max-width: 1200px;
+    margin: 50px auto 100px auto; 
+    padding: 0 40px;
+    text-align: center;
+}
+
+.work-item {
+    flex-basis: 300px; 
+    padding: 20px 10px;
+}
+
+.work-item h3 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #292F36;
+    margin-bottom: 10px;
+}
+
+.work-item p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4D5053;
+}

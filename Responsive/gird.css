@@ -1,0 +1,135 @@
+/* .header , .nav , .main , .side , .side2 , .footer{
+     background: blueviolet;
+     border: 2px solid ;
+     padding:5px; 
+     
+}
+.header{
+     grid-area: header;
+}
+.nav{
+     grid-area: nav;
+}
+.main{
+     grid-area: main;
+}
+.side{
+     grid-area: side;
+}
+.side2{
+     grid-area: side2;
+}
+.footer{
+     grid-area: footer;
+}
+.contain{
+     display: grid;
+     gap:20px;
+     grid-template-areas: 
+     "header    header   header  header" 
+     "nav       main     main    side"
+     "nav       main     main    side2"
+     "footer    footer   footer  footer"
+     ;
+} */
+ /* 🌈 General Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #e6e6ff);
+  color: #333;
+}
+
+/* 🧩 Grid Container */
+.contain {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "nav main main side"
+    "nav main main side2"
+    "footer footer footer footer";
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 🎀 Common Box Styling */
+.header, .nav, .main, .side, .side2, .footer {
+  background: linear-gradient(135deg, #7e57c2, #9575cd);
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 🌟 Hover Effect */
+.header:hover, .nav:hover, .main:hover, .side:hover, .side2:hover, .footer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* 🧭 Header */
+.header {
+  grid-area: header;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+/* 📚 Navigation */
+.nav {
+  grid-area: nav;
+  background: linear-gradient(135deg, #512da8, #673ab7);
+  padding: 20px;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav ul li {
+  margin: 10px 0;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+  padding: 8px 12px;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+.nav ul li a:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* 📰 Main Content */
+.main {
+  grid-area: main;
+  background: linear-gradient(135deg, #7e57c2, #ab47bc);
+}
+.main article {
+  margin-bottom: 20px;
+}
+.main h3 {
+  margin-top: 0;
+}
+
+/* 💬 Sidebar */
+.side, .side2 {
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(135deg, #5e35b1, #8e24aa);
+}
+
+/* 🦶 Footer */
+.footer {
+  grid-area: footer;
+  text-align: center;
+  font-size: 1.2em;
+  background: linear-gradient(135deg, #4527a0, #6a1b9a);
+}

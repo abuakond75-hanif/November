@@ -1,0 +1,286 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F8F8F8; /* Light gray background for the page */
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Header and Navigation --- */
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust as per your design's max width */
+    margin: 0 auto;
+    padding: 0 20px; /* Padding for smaller screens */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.logo img {
+    height: 30px; /* Adjust logo icon size */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu li a {
+    font-weight: 500;
+    color: #555;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    color: #CDA274; /* Highlight color */
+}
+
+.nav-menu li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #CDA274; /* Underline for active/hover */
+}
+
+.search-icon {
+    font-size: 20px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto; /* Margin from header */
+    border-radius: 50px; /* Curved edges as in design */
+    overflow: hidden; /* Ensures content/image stays within curved edges */
+    height: 550px; /* Fixed height for the hero section */
+    display: flex; /* Use flex to align content and image */
+    align-items: center; /* Vertically center content */
+    background-color: #f0f0f0; /* Fallback background */
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/hero-bg.jpg'); /* আপনার ব্যাকগ্রাউন্ড ইমেজ এখানে */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1; /* Place image below content visually */
+}
+
+.hero-content {
+    position: relative; /* To be on top of the image */
+    z-index: 2;
+    padding: 0 0 0 100px; /* Adjust padding as needed */
+    max-width: 500px; /* Limit width of content for better readability */
+    color: #333; /* Dark text for contrast */
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #292F36;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #4A4A4A;
+}
+
+.btn-get-started {
+    display: inline-block;
+    background-color: #292F36; /* Dark button background */
+    color: #fff;
+    padding: 18px 30px;
+    border-radius: 18px; /* Slightly curved button */
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-get-started:hover {
+    background-color: #CDA274; /* Hover color */
+}
+
+/* --- Work Process Section --- */
+.work-process-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between cards */
+    max-width: 1200px;
+    margin: 100px auto; /* Margin from hero section */
+    padding: 0 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.work-item {
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    flex: 1; /* Allows items to grow and shrink */
+    min-width: 280px; /* Minimum width for cards before wrapping */
+    max-width: 350px; /* Maximum width for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.work-item h3 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #292F36;
+    margin-bottom: 20px;
+}
+
+.work-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.read-more {
+    font-weight: 600;
+    color: #292F36;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #CDA274;
+}
+
+/* --- Responsive Design (Basic) --- */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 0 30px;
+    }
+    .nav-menu {
+        gap: 20px;
+    }
+    .hero-section {
+        height: 500px;
+        margin: 30px auto;
+        border-radius: 30px;
+    }
+    .hero-content {
+        padding: 0 0 0 50px;
+        max-width: 450px;
+    }
+    .hero-content h1 {
+        font-size: 48px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .work-process-section {
+        gap: 30px;
+        margin: 80px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack logo and menu */
+        gap: 20px;
+        padding: 20px;
+    }
+    .nav-menu {
+        flex-wrap: wrap; /* Allow menu items to wrap */
+        justify-content: center;
+        gap: 15px;
+    }
+    .hero-section {
+        flex-direction: column; /* Stack content and image on smaller screens */
+        height: auto; /* Auto height for better flow */
+        border-radius: 20px;
+        text-align: center;
+    }
+    .hero-image-overlay {
+        position: static; /* Image flows with content */
+        height: 300px; /* Give some height to the image section */
+    }
+    .hero-content {
+        padding: 40px 20px; /* More padding for mobile */
+        max-width: 100%;
+    }
+    .hero-content h1 {
+        font-size: 38px;
+    }
+    .hero-content p {
+        font-size: 15px;
+    }
+    .work-process-section {
+        flex-direction: column; /* Stack work items vertically */
+        align-items: center;
+        margin: 50px auto;
+    }
+    .work-item {
+        max-width: 90%; /* Take more width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+    .nav-menu li a {
+        font-size: 14px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content p {
+        font-size: 14px;
+    }
+    .btn-get-started {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+}
