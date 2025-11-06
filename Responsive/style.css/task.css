@@ -1,70 +1,59 @@
-.nav{
-  text-decoration: none;
-  
-   
-
+body {
+  font-family: "Manrope", sans-serif;
 }
 
-.nav .hero{
+.nav {
+  text-decoration: none;
+}
+
+.nav .hero {
   flex-direction: row;
   justify-content: space-between;
 }
 
-.logo{
+.logo {
   padding: right 15px;
   display: flex;
 }
 
-.menue{
+.menue {
   list-style: none;
   display: flex;
   gap: 20px;
   width: 586px;
   margin-right: auto;
-  
 }
-nav ul li a  {
-  
-   opacity: 1;
-   text-decoration: none;
-  
-
+nav ul li a {
+  opacity: 1;
+  text-decoration: none;
 }
-.section-content{
+.section-content {
   font-weight: bold;
   background-image: url(Rectangle\ 1.png);
-  
-   width: 1210px ;
-height: 758px ;
-top: 258px;
-left: 355px;
-border-top-left-radius: 100px;
-border-bottom-right-radius: 100px;
-angle: 0 deg;
-opacity: 1;
-
-
-
+  width: 1210px;
+  height: 758px;
+  top: 258px;
+  left: 355px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  angle: 0 deg;
+  opacity: 1;
 }
-.work{
+.work {
   display: flex;
   padding: 30px;
-  width: 1158px ;
-height: 225px ;
-top: 1111px;
-left: 381px;
-angle: 0 deg;
-opacity: 1;
-gap: 42px;
-
-
+  width: 1158px;
+  height: 225px;
+  top: 1111px;
+  left: 381px;
+  angle: 0 deg;
+  opacity: 1;
+  gap: 42px;
 }
-.project{
-  width: 358px ;
-height: 225px;
-angle: 0 deg;
-opacity: 1;
-gap: 52px;
-
-
+.project {
+  width: 358px;
+  height: 225px;
+  angle: 0 deg;
+  opacity: 1;
+  gap: 52px;
 }

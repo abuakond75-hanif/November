@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DaisyUI Demo Layout</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-base-100 text-base-content">
+
+    <!--  Navbar -->
+    <div class="navbar bg-base-200 shadow-md">
+      <div class="flex-1">
+        <a class="text-xl font-bold text-primary">DaisyUI Demo</a>
+      </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal px-1 hidden md:flex">
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li>
+            <details>
+              <summary>Services</summary>
+              <ul class="p-2 bg-base-100 rounded-box w-40">
+                <li><a>Web Design</a></li>
+                <li><a>Frontend Dev</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a>Contact</a></li>
+        </ul>
+        <button class="btn btn-sm btn-primary ml-2" onclick="my_modal_1.showModal()">Login</button>
+      </div>
+    </div>
+
+    <!--  Hero Section -->
+    <div class="hero min-h-[70vh] bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200">
+      <div class="hero-content text-center">
+        <div class="max-w-lg">
+          <h1 class="text-4xl font-bold text-gray-800">Welcome to DaisyUI Demo 🌸</h1>
+          <p class="py-4 text-gray-700">
+            Explore TailwindCSS components with beautiful and simple DaisyUI styles.
+          </p>
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+      </div>
+    </div>
+
+    <!--  FAQ Section -->
+    <section class="max-w-2xl mx-auto my-12 p-4">
+      <h2 class="text-2xl font-semibold text-center mb-6">Frequently Asked Questions</h2>
+
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300 mb-2">
+        <input type="radio" name="faq" checked="checked" />
+        <div class="collapse-title font-semibold">How do I create an account?</div>
+        <div class="collapse-content text-sm">
+          Click the "Sign Up" button in the top right corner and follow the steps.
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300 mb-2">
+        <input type="radio" name="faq" />
+        <div class="collapse-title font-semibold">I forgot my password. What can I do?</div>
+        <div class="collapse-content text-sm">
+          Click “Forgot Password” and reset it using your email.
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="faq" />
+        <div class="collapse-title font-semibold">How can I update my profile?</div>
+        <div class="collapse-content text-sm">
+          Go to “My Account” → “Edit Profile” and save your changes.
+        </div>
+      </div>
+    </section>
+
+    <!--  Modal -->
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Login to your account</h3>
+        <div class="py-4">
+          <input type="text" placeholder="Username" class="input input-bordered w-full mb-3" />
+          <input type="password" placeholder="Password" class="input input-bordered w-full" />
+        </div>
+        <div class="modal-action">
+          <button class="btn btn-primary">Login</button>
+          <form method="dialog">
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-base-200 text-base-content mt-10">
+      <aside>
+        <p class="font-bold text-lg">DaisyUI Demo Layout<br /><span class="text-sm font-normal">Built with ❤️ using TailwindCSS</span></p>
+      </aside>
+      <nav>
+        <h6 class="footer-title">Links</h6>
+        <a class="link link-hover">About</a>
+        <a class="link link-hover">Projects</a>
+        <a class="link link-hover">Blog</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Contact</h6>
+        <a class="link link-hover">Facebook</a>
+        <a class="link link-hover">Twitter</a>
+        <a class="link link-hover">GitHub</a>
+      </nav>
+    </footer>
+
+  </body>
+</html>

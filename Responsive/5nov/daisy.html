@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DaisyUi Test</title>
+    <link href="https://cdn.jsdelivr.net/combine/npm/daisyui@5/base/rootscrollgutter.css,npm/daisyui@5/base/scrollbar.css,npm/daisyui@5/base/rootcolor.css,npm/daisyui@5/base/rootscrolllock.css,npm/daisyui@5/base/reset.css,npm/daisyui@5/base/svg.css,npm/daisyui@5/base/properties.css,npm/daisyui@5/components/input.css,npm/daisyui@5/components/menu.css,npm/daisyui@5/components/toggle.css,npm/daisyui@5/components/checkbox.css,npm/daisyui@5/components/select.css,npm/daisyui@5/components/button.css,npm/daisyui@5/theme/light.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- <h3>Hi,I am using DaisyUi</h3>
+    <button class="btn btn-primary w-fit"> Click Here</button>
+    <button class="btn btn-warning "> dumped here</button>
+    <br>
+    <!-- Dropdown -->
+     <div class="dropdown dropdown-start bg-red-500">
+  <div tabindex="0" role="button" class="btn m-1">Click ⬇️</div>
+  <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>
+<div class="dropdown dropdown-center">
+  <div tabindex="0" role="button" class="btn m-1">Click  ⬇️</div>
+  <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>
+<div>
+     <!-- Modal -->
+      <!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+</div>
+<div class="fab fab-flower">
+  <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
+  <div tabindex="0" role="button" class="btn btn-circle btn-lg">
+    <svg
+      aria-label="New"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      class="size-6"
+    >
+      <path
+        d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"
+      />
+    </svg>
+  </div>
+
+  <!-- Main Action button replaces the original button when FAB is open -->
+  <button class="fab-main-action btn btn-circle btn-lg btn-primary">
+    <svg
+      aria-label="New post"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      class="size-6"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M11.013 2.513a1.75 1.75 0 0 1 2.475 2.474L6.226 12.25a2.751 2.751 0 0 1-.892.596l-2.047.848a.75.75 0 0 1-.98-.98l.848-2.047a2.75 2.75 0 0 1 .596-.892l7.262-7.261Z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </button>
+<!-- FAB/Speed Dial -->
+  <!-- buttons that show up when FAB is open -->
+  <button class="btn btn-circle btn-lg">
+    <svg
+      aria-label="New camera photo"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      class="size-6"
+    >
+      <path d="M9.5 8.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+      <path
+        fill-rule="evenodd"
+        d="M2.5 5A1.5 1.5 0 0 0 1 6.5v5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 13.5 5h-.879a1.5 1.5 0 0 1-1.06-.44l-1.122-1.12A1.5 1.5 0 0 0 9.38 3H6.62a1.5 1.5 0 0 0-1.06.44L4.439 4.56A1.5 1.5 0 0 1 3.38 5H2.5ZM11 8.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </button>
+  <button class="btn btn-circle btn-lg">
+    <svg
+      aria-label="New poll"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      class="size-6"
+    >
+      <path
+        d="M3 4.75a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6.25 3a.75.75 0 0 0 0 1.5h7a.75.75 0 0 0 0-1.5h-7ZM6.25 7.25a.75.75 0 0 0 0 1.5h7a.75.75 0 0 0 0-1.5h-7ZM6.25 11.5a.75.75 0 0 0 0 1.5h7a.75.75 0 0 0 0-1.5h-7ZM4 12.25a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM3 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
+      />
+    </svg>
+  </button>
+  <button class="btn btn-circle btn-lg">
+    <svg
+      aria-label="New gallery photo"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      class="size-6"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Zm10.5 5.707a.5.5 0 0 0-.146-.353l-1-1a.5.5 0 0 0-.708 0L9.354 9.646a.5.5 0 0 1-.708 0L6.354 7.354a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0-.146.353V12a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V9.707ZM12 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </button>
+  <button class="btn btn-circle btn-lg">
+    <svg
+      aria-label="New voice"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      class="size-6"
+    >
+      <path d="M8 1a2 2 0 0 0-2 2v4a2 2 0 1 0 4 0V3a2 2 0 0 0-2-2Z" />
+      <path
+        d="M4.5 7A.75.75 0 0 0 3 7a5.001 5.001 0 0 0 4.25 4.944V13.5h-1.5a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-1.5v-1.556A5.001 5.001 0 0 0 13 7a.75.75 0 0 0-1.5 0 3.5 3.5 0 1 1-7 0Z"
+      />
+    </svg>
+  </button>
+</div>
+<!-- Swap -->
+ <label class="btn btn-circle swap swap-rotate">
+  <!-- this hidden checkbox controls the state -->
+  <input type="checkbox" />
+
+  <!-- hamburger icon -->
+  <svg
+    class="swap-off fill-current"
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    viewBox="0 0 512 512">
+    <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+  </svg>
+
+  <!-- close icon -->
+  <svg
+    class="swap-on fill-current text-9xl "
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    viewBox="0 0 512 512">
+    <polygon
+      points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+  </svg>
+</label>
+<label class="swap swap-flip text-9xl">
+  <!-- this hidden checkbox controls the state -->
+  <input type="checkbox" />
+
+  <div class="swap-on">😈</div>
+  <div class="swap-off">😇</div>
+</label> -->
+<!--  Accordion with Arrow Icon -->
+         <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-2" checked="checked" />
+  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+</div>
+<div class="collapse collapse-arrow bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-2" />
+  <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+  <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+</div>
+<div class="collapse collapse-arrow bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-2" />
+  <div class="collapse-title font-semibold">How do I update my profile information?</div>
+  <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+</div>
+<div class="justify-between collapse-arrow">
+     <div class="collapse collapse-plus bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-3" checked="checked" />
+  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+</div>
+<div class="collapse collapse-plus bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+  <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+</div>
+<div class="collapse collapse-plus bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold">How do I update my profile information?</div>
+  <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+</div>
+</div>
+  </body>
+</html>
